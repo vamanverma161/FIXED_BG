@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Video Landing Page Concept</title>
+    <link rel="icon" type="image/x-icon" href="https://e1.pxfuel.com/desktop-wallpaper/913/152/desktop-wallpaper-royal-lion-logo-lion-symbol-thumbnail.jpg">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: sans-serif;
+            background: #000;
+        }
+        main{
+            color: #fff;
+        }
+        p{
+            font-size: 1.1em;
+            margin: 1.5em 0;
+            line-height: 34px;
+        }
+        h2{
+            font-size: 2em;
+        }
+        .video-text{
+            font-family: sans-serif;
+            min-height: 30em;
+            height: 100vh;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .text, .about-text,.divider,.video-text{
+            background: #000;
+        }
+        .text, .video-text, .divider, .call-to-action{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .text, .divider, .about, .btn{
+            position: relative;
+            z-index: 1;
+        }
+        .text{
+            text-transform: uppercase;
+            letter-spacing:  0.1em;
+            mix-blend-mode: multiply;
+            font-size: clamp(2em,20vw,10em);
+            text-align: center;
+            flex-direction: column;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 100%;
+            height: 100%;
+        }
+        .bg-video{
+            position: fixed;
+            max-width: 1200px;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        .text span, .text small{
+            animation: fadeIn 800ms ease-out forwards;
+            opacity: 0;
+        }
+        .text span{
+            animation-delay: 200ms;
+        }
+        .text small{
+            font-size: 0.5em;
+            animation-delay: 1000ms;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .about-text{
+            padding: 0 2em;
+        }
+        .divider{
+            height: 8em;
+            padding: 2em;
+        }
+        .divider h1{
+            font-size: 2em;
+        }
+        .call-to-action{
+            min-height: 20em;
+            padding: 2.5em;
+        }
+        .btn{
+            background: #fff;
+            color: #000;
+            padding: 1em 1.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 10px;
+            font-size: 1.2em;
+            letter-spacing: 3px;
+            transition: 300ms;
+            text-decoration: none;
+        }
+        .btn:hover{
+            background: #000;
+            color: white;
+            box-shadow: 5px 5px 20px .7px white;
+        }
+        @keyframes fadeIn{
+            0%{
+                opacity: 0;
+                transform: translateY(5em);
+            }
+            100%{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @media screen and (min-width: 700px){
+            .about-text{
+                padding: 0 4em 0 2em;
+            }
+            .about-text-alt{
+                padding: 0 2em 0 4em;
+            }
+        }
+        @media screen and (max-width: 700px){
+            .container{
+                grid-template-columns: 1fr;
+            }
+            .about-text{
+                order: 1;
+                margin-bottom: 20em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <video src="v.mp4" class="bg-video" loop muted autoplay></video>
+        <div class="video-text">
+            <h1 class="text">
+                <span>Outdoors</span>
+                <small>Adventures</small>
+            </h1>
+        </div>
+        <div class="about">
+            <div class="container">
+                <div class="about-text">
+                    <h2>Explore the Great Outdoors</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident fugit sit expedita saepe fugiat esse, doloremque cum dicta quam autem obcaecati, alias numquam, ex itaque corrupti? Voluptatibus nam sequi nemo aliquid quidem. Non at nam tempora facilis accusamus a porro error ea, quibusdam deleniti dolores ullam excepturi laborum perferendis impedit!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam fugiat excepturi facilis harum libero, non numquam? Sit, odio deserunt. Officia consectetur error nihil laudantium earum, facere corporis fugiat beatae reiciendis rem qui! Similique sed inventore dolore nulla modi asperiores! Earum distinctio aliquam dolore eveniet iusto, obcaecati et fugit, dolor recusandae repudiandae aperiam, nemo vel? Atque pariatur rem eum autem aut.</p>
+                </div>
+                <div></div>
+            </div>
+            <div class="divider"></div>
+            <div class="container">
+                <div></div>
+                <div class="about-text about-text-alt">
+                    <h2>Our Destinations</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam fugiat excepturi facilis harum libero, non numquam? Sit, odio deserunt. Officia consectetur error nihil laudantium earum, facere corporis fugiat beatae reiciendis rem qui! Similique sed inventore dolore nulla modi asperiores! Earum distinctio aliquam dolore eveniet iusto, obcaecati et fugit, dolor recusandae repudiandae aperiam, nemo vel? Atque pariatur rem eum autem aut.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam fugiat excepturi facilis harum libero, non numquam? Sit, odio deserunt. Officia consectetur error nihil laudantium earum, facere corporis fugiat beatae reiciendis rem qui! Similique sed inventore dolore nulla modi asperiores! Earum distinctio aliquam dolore eveniet iusto, obcaecati et fugit, dolor recusandae repudiandae aperiam, nemo vel? Atque pariatur rem eum autem aut.</p>
+                </div>
+            </div>
+        </div>
+        <div class="divider">
+            <h1>Let's start from the beginning</h1>
+        </div>
+        <div class="call-to-action">
+            <a href="#" class="btn">Get Started</a>
+        </div>
+    </main>
+</body>
+</html>
